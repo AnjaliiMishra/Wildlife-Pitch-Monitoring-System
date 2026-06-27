@@ -114,7 +114,7 @@ The Maximum Entropy (MaxEnt) model successfully identified environmentally suita
 ### Habitat Suitability Mapping
 
 <p align="center">
-  <img src="assets/habitat-map.png" alt="Habitat Suitability Map" width="800">
+  <img src="assets/heatmap.png" alt="Habitat Suitability Map" width="800">
 </p>
 
 The habitat suitability map classifies the study area into regions of low, moderate, and high suitability. Areas with higher suitability indicate favorable environmental conditions capable of supporting sustainable African lion populations.
@@ -123,23 +123,27 @@ The habitat suitability map classifies the study area into regions of low, moder
 
 ### Model Performance
 
-*ROC Curve Placeholder*
+<p align="center">
+  <img src="assets/auc-roc.png" alt="ROC Curve" width="700"/>
+</p>
 
 The model achieved a **training AUC of 0.887**, indicating strong predictive performance. This demonstrates the model's ability to effectively distinguish environmentally suitable habitats using presence-only occurrence data.
 
 ---
 
 ### Variable Importance
-
-*Jackknife Analysis Placeholder*
+<p align="center">
+  <img src="assets/jackknife.png" alt="Jackknife Analysis" width="850"/>
+</p>
 
 The Jackknife analysis identifies the contribution of each environmental variable to the model. Results indicate that **BIO16 (Precipitation of the Wettest Quarter)** is the most influential predictor affecting habitat suitability.
 
 ---
 
 ### Response Curves
-
-*Response Curves Placeholder*
+<p align="center">
+  <img src="assets/response-curves.png" alt="Response Curves" width="850"/>
+</p>
 
 Response curves illustrate how predicted habitat suitability changes with variations in environmental conditions, providing insights into the ecological preferences of African lions.
 
