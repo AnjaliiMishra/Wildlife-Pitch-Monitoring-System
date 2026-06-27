@@ -102,6 +102,69 @@ The trained model generates a continuous habitat suitability map, assigning each
 The habitat suitability map is further analyzed to identify ecological corridors connecting fragmented habitats. These corridors facilitate wildlife movement, promote genetic diversity, and provide valuable insights for long-term conservation planning.
 
 
+
 ## Results
 
-The MaxEnt model successfully identified environmentally suitable habitats for African lions across the African continent. The generated habitat suitability map highlights regions with varying probabilities of supporting lion populations, providing valuable insights into habitat distribution and potential ecological corridors.
+The Maximum Entropy (MaxEnt) model successfully identified environmentally suitable habitats for African lions across the African continent. The generated outputs highlight habitat suitability patterns, key environmental variables, and potential ecological corridors that support wildlife conservation planning.
+
+---
+
+### Habitat Suitability Mapping
+
+*Image Placeholder*
+
+The habitat suitability map classifies the study area into regions of low, moderate, and high suitability. Areas with higher suitability indicate favorable environmental conditions capable of supporting sustainable African lion populations.
+
+---
+
+### Model Performance
+
+*ROC Curve Placeholder*
+
+The model achieved a **training AUC of 0.887**, indicating strong predictive performance. This demonstrates the model's ability to effectively distinguish environmentally suitable habitats using presence-only occurrence data.
+
+---
+
+### Variable Importance
+
+*Jackknife Analysis Placeholder*
+
+The Jackknife analysis identifies the contribution of each environmental variable to the model. Results indicate that **BIO16 (Precipitation of the Wettest Quarter)** is the most influential predictor affecting habitat suitability.
+
+---
+
+### Response Curves
+
+*Response Curves Placeholder*
+
+Response curves illustrate how predicted habitat suitability changes with variations in environmental conditions, providing insights into the ecological preferences of African lions.
+
+
+
+## Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Programming Language | Python |
+| Species Distribution Modeling | MaxEnt |
+| GIS Software | ArcGIS |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib |
+| Data Source | GBIF |
+
+
+## Repository Structure
+
+```text
+WildlifePitchMonitoringSystem/
+│
+├── assets/          # Images and diagrams
+├── data/            # Input datasets
+├── docs/            # Research documents 
+├── outputs/         # Model outputs 
+└── README.md     
+```
+
+
+
+
