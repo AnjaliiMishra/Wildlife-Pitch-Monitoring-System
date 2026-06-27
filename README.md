@@ -31,4 +31,77 @@ Key attributes available in the dataset include:
 
 For this research, the geographic coordinates were the most critical variables, as they provided the spatial foundation required for clustering, habitat suitability analysis, and ecological corridor identification.
 
+
 ## Methodology
+
+The Wildlife Pitch Monitoring System follows a structured geospatial workflow to predict habitat suitability for African lions and identify potential ecological corridors. Beginning with raw occurrence records, the data undergoes preprocessing, spatial refinement, habitat suitability modeling, and conservation-oriented spatial analysis.
+
+---
+
+### Model Pipeline 
+
+```mermaid
+flowchart LR
+    A[ African Lion Occurrence Records]
+    --> B[Data Preprocessing]
+    --> C[Spatial Grid-Based Clustering]
+    --> D[Environmental Variables]
+    --> E[MaxEnt Modeling]
+    --> F[Habitat Suitability Prediction]
+    --> G[Ecological Corridor Identification]
+
+style A fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style B fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style C fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style D fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style E fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style F fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+style G fill:#2E7D32,color:#fff,stroke:#1B5E20,stroke-width:2px
+```
+
+
+
+### 1. Data Collection
+
+The study utilizes **6,638 African lion occurrence records** stored in `Sample.csv`. Each observation contains temporal information and geographic coordinates representing recorded lion sightings across Africa. These occurrence records form the primary input for habitat suitability modeling.
+
+---
+
+### 2. Data Preprocessing
+
+The collected dataset is cleaned to improve data quality before analysis. Duplicate records, incomplete observations, and invalid geographic coordinates are removed to ensure reliable spatial modeling. The processed dataset is then converted into a GIS-compatible format.
+
+---
+
+### 3. Grid-Based Clustering
+
+To reduce spatial sampling bias, the study area is divided into uniform spatial grids. Multiple observations occurring within the same grid cell are represented by a single occurrence point. This preserves the spatial distribution of lion sightings while preventing overrepresentation from heavily sampled regions.
+
+---
+
+### 4. Environmental Variable Preparation
+
+Environmental raster layers influencing lion habitat selection are collected and standardized to a common coordinate system and spatial resolution. These variables include climatic, vegetation, topographical, and land cover datasets used during habitat suitability modeling.
+
+---
+
+### 5. Habitat Suitability Modeling
+
+The processed occurrence records and environmental variables are supplied to the **Maximum Entropy (MaxEnt)** algorithm. Using presence-only data, MaxEnt estimates habitat suitability by identifying environmental conditions associated with known lion occurrences.
+
+---
+
+### 6. Habitat Suitability Prediction
+
+The trained model generates a continuous habitat suitability map, assigning each location a suitability score ranging from low to high. These predictions identify regions capable of supporting sustainable African lion populations.
+
+---
+
+### 7. Ecological Corridor Identification
+
+The habitat suitability map is further analyzed to identify ecological corridors connecting fragmented habitats. These corridors facilitate wildlife movement, promote genetic diversity, and provide valuable insights for long-term conservation planning.
+
+
+## Results
+
+The MaxEnt model successfully identified environmentally suitable habitats for African lions across the African continent. The generated habitat suitability map highlights regions with varying probabilities of supporting lion populations, providing valuable insights into habitat distribution and potential ecological corridors.
