@@ -113,7 +113,9 @@ The Maximum Entropy (MaxEnt) model successfully identified environmentally suita
 
 ### Habitat Suitability Mapping
 
-*Image Placeholder*
+<p align="center">
+  <img src="assets/habitat-map.png" alt="Habitat Suitability Map" width="800">
+</p>
 
 The habitat suitability map classifies the study area into regions of low, moderate, and high suitability. Areas with higher suitability indicate favorable environmental conditions capable of supporting sustainable African lion populations.
 
