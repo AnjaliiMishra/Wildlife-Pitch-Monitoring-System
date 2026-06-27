@@ -1,5 +1,7 @@
 # Wildlife Pitch Monitoring System
 
+*Presented at the MaxEnt 2025 Conference • University of Auckland, New Zealand*
+
 
 ## Abstract
 
